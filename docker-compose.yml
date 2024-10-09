@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  repo_tester:
+    build: ./docker
+    volumes:
+      - .:/app
+    environment:
+      - REPO_URL=https://github.com/user/repo.git
+    command: python main.py
